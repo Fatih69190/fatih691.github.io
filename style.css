@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+a {
+    text-decoration: none;  /* Corrigé la déclaration de text-decoration */
+    font-size: 13px;
+}
+
+/* Scrollbar CSS */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #333;  /* Couleur sombre pour la barre */
+    border-radius: 30px;
+}
+
+/* Augmentation de la taille de la police et amélioration de la bande sous l'en-tête */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 5%;
+    border-bottom: 4px solid #ff4b2b;  /* Bande rouge sous l'en-tête */
+    background-image: linear-gradient(to right, #333, #ff2b2b);  /* Dégradé du gris foncé au rouge */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Ombre portée pour l'effet 3D */
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    width: 50px;  /* Réduire la taille de l'image du logo */
+    height: auto;  /* Garder les proportions de l'image */
+    margin-right: 10px;  /* Espacement entre l'image et le titre */
+}
+
+header .logo h1 {
+    font-size: 40px;  /* Taille du titre */
+    color: #fff;  /* Texte blanc pour le logo */
+}
+
+.menu {
+    display: flex;
+}
+
+.menu li {
+    margin-left: 50px;
+    position: relative;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+
+.menu li a {
+    color: #fff;  /* Liens blancs dans le menu */
+    font-size: 22px;  /* Taille de la police des liens */
+    transition: 0.3s;
+}
+
+.menu li a:hover {
+    color: #ff4b2b;  /* Couleur rouge au survol */
+    font-size: 24px;  /* Augmentation de la taille du texte au survol */
+}
+
+.menu li:hover::after {
+    content: "";
+    position: absolute;
+    height: 30px;
+    z-index: -1;
+    width: 30px;
+    background-color: #f2f2f2;  /* Fond clair pour l'effet de survol */
+    border-radius: 50%;
+}
+
+.number {
+    font-size: 22px; /* Taille du texte */
+    color: #fff;  /* Texte blanc */
+    padding: 15px 30px;  /* Espacement intérieur */
+    background: linear-gradient(45deg, #ff4b2b, #ff416c);  /* Dégradé rouge pour le fond */
+    border-radius: 60px;
+    border: 3px solid #fff;  /* Bordure blanche */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre portée */
+}
+/* Ajustement de la taille du texte des titres dans la section "home" */
+.home .left h1 {
+    font-size: 120px;  /* Augmentation du titre */
+}
+
+.home .left h4 {
+    font-weight: 500;
+    font-size: 30px;  /* Augmentation de la taille de la sous-titre */
+}
+
+/* Gérer les éléments mobiles */
+@media (max-width: 628px) {
+    header .logo h1 {
+        font-size: 18px;
+    }
+
+    .menu li a {
+        font-size: 18px;  /* Ajustement de la taille de la police pour les mobiles */
+    }
+
+    .home .left h1 {
+        font-size: 70px;
+    }
+
+    .home .left h4 {
+        font-size: 20px;
+    }
+}
+
+
+/* home CSS */
+/* ========================== Général ========================== */
+.home {
+    padding: 0 5%;  /* Ajoute un espacement de 5% de chaque côté (gauche et droite) du conteneur */
+    margin: 50px 0;  /* Ajoute une marge de 50px en haut et en bas du conteneur */
+    display: flex;  /* Utilisation de Flexbox pour aligner les éléments */
+    flex-direction: column;  /* Les éléments enfants seront alignés en colonne (verticalement) */
+    align-items: center;  /* Centrage des éléments enfants horizontalement */
+    justify-content: center;  /* Centrage des éléments enfants verticalement */
+    height: calc(100vh - 200px);  /* Hauteur de la section égale à 100% de la hauteur de la fenêtre, moins 200px */
+}
+
+.home .left {
+    text-align: center;  /* Centrer le texte à l'intérieur du conteneur .left */
+    width: 100%;  /* La section occupe toute la largeur disponible */
+}
+
+/* ========================== Titre principal ========================== */
+.home .left h1 {
+    font-size: 100px;  /* Taille du texte du titre principal */
+    color: red;  /* Couleur du texte du titre principal */
+    font-weight: 600;  /* Poids de la police (plus épais) */
+    padding: 0;  /* Suppression de l'espacement intérieur */
+    margin-left: -8px;  /* Décalage du texte vers la gauche de 8px */
+    margin-bottom: -10px;  /* Décalage du texte vers le bas de 10px */
+}
+
+/* ========================== Span dans le titre ========================== */
+.home .left h1 span {
+    color: #4f4f4f;  /* Couleur spécifique pour la partie span dans le titre */
+}
+
+/* ========================== Sous-titre ========================== */
+.home .left h4 {
+    font-weight: 750;  /* Poids de la police pour le sous-titre */
+    font: 25px;  /* Taille de la police pour le sous-titre */
+    margin-bottom: 10px;  /* Marge en bas du sous-titre */
+    color: #999;  /* Couleur grise claire pour le sous-titre */
+    text-transform: capitalize;  /* Met en majuscule la première lettre de chaque mot */
+}
+
+/* ========================== Paragraphe ========================== */
+.home .left p {
+    font-size: 30px;  /* Taille de la police des paragraphes */
+    color: #999;  /* Couleur du texte des paragraphes */
+}
+
+/* ========================== Bouton (CV) ========================== */
+.button-link {
+    margin-top: 30px;  /* Marge en haut du bouton (espacement du texte au-dessus) */
+    border: 0;  /* Supprime la bordure du bouton */
+    background: transparent;  /* Fond transparent pour le bouton */
+}
+
+/* ========================== Style du lien dans le bouton ========================== */
+.button-link a {
+    font-size: 20px;  /* Taille de la police du lien */
+    color: #fff;  /* Couleur du texte du lien (blanc) */
+    padding: 10px 25px;  /* Espacement intérieur du bouton (haut/bas : 10px, gauche/droite : 25px) */
+    background: linear-gradient(red, red);  /* Dégradé de couleur rouge pour le fond du bouton */
+    border-radius: 60px;  /* Coins arrondis du bouton */
+    text-transform: uppercase;  /* Texte en majuscules */
+    line-height: 1px;  /* Hauteur de ligne du texte (contrôle l'espacement vertical entre les lignes) */
+}
+
+/* ========================== Liens sociaux ========================== */
+.social-links {
+    margin-top: 20px;  /* Marge en haut des liens sociaux */
+}
+
+.social-links a {
+    display: inline-block;  /* Aligne les liens socialement en ligne */
+    margin: 10px 15px;  /* Espacement entre chaque lien */
+    font-size: 20px;  /* Taille de la police des liens sociaux */
+    color: #fff;  /* Couleur blanche pour le texte des liens */
+    padding: 10px 25px;  /* Espacement intérieur des liens */
+    background: linear-gradient(red, red);  /* Dégradé rouge pour les liens */
+    border-radius: 60px;  /* Coins arrondis pour les liens */
+    text-transform: uppercase;  /* Texte en majuscules */
+    text-decoration: none;  /* Enlève le soulignement des liens */
+    line-height: 1px;  /* Hauteur de ligne du texte */
+    transition: 0.3s;  /* Transition pour les effets de survol */
+}
+
+/* ========================== Effet de survol pour les liens sociaux ========================== */
+.social-links a:hover {
+    color: #ff4b2b;  /* Couleur du texte au survol */
+    background: linear-gradient(#ff4b2b, #ff416c);  /* Dégradé de couleur pour l'arrière-plan au survol */
+}
+
+
+jeu
+
+#clickGame {
+    text-align: center;
+    padding: 50px 0;
+    background: #f7f7f7;
+}
+
+.game-container {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#gameArea {
+    width: 100%;
+    height: 300px;
+    border: 2px dashed #aaa;
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.word {
+    position: absolute;
+    padding: 5px 10px;
+    background-color: #ff4b2b;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    user-select: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: transform 0.1s;
+}
+
+.word:hover {
+    transform: scale(1.2);
+}
+
+
+
+footer {
+    background-color: #292323; /* Gris clair */
+    padding: 20px 0;
+    text-align: center;
+    color: #ffffff;
+    font-size: 16px;
+    margin-top: 50px; /* Espacement avec ce qu’il y a au-dessus */
+    border-top: 2px solid #ccc; /* Fine ligne de séparation optionnelle */
+}
