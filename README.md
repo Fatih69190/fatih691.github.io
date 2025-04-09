@@ -22,21 +22,21 @@ Charte graphique :
 
 Que contient mon portfolio :
 
-En-tête : le menu de navigation ainsi que mon numéro
+- En-tête : le menu de navigation ainsi que mon numéro
 
-Accueil : une brève présentation suivie du CV et de mes certifications.
+- Accueil : une brève présentation suivie du CV et de mes certifications.
 
-Compétences techniques : ce que j'ai appris à utiliser durant mes deux années en BTS
+- Compétences techniques : ce que j'ai appris à utiliser durant mes deux années en BTS
 
-Tableau de synthèse : Tableau qui récapitule mes compétences acquises
+- Tableau de synthèse : Tableau qui récapitule mes compétences acquises
 
-Veille : Sujet qui porte sur l'iot durant une année pour voir les améliorations dans ce secteur
+- Veille : Sujet qui porte sur l'iot durant une année pour voir les améliorations dans ce secteur
 
-Projets : les projets effectuer au cours de ces deux années
+- Projets : les projets effectuer au cours de ces deux années
 
-Stage : Mes rapport de stage durant les 5 semaines de la première année et mes 7 semaines de stage de la seconde année
+- Stage : Mes rapport de stage durant les 5 semaines de la première année et mes 7 semaines de stage de la seconde année
 
-Pied de page : Mes contact
+- Pied de page : Mes contact
 
 
 
