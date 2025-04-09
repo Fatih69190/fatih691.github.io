@@ -45,79 +45,18 @@
             <p>Etudiant en BTS Services Informatiques aux Organisations</p>
             <p>option Solution Logicielles et Applications Métiers</p>
             <button class="button-link">
-                <a href="#">Curriculum Vitae</a>
+                <a href="CV 2025.pdf">Curriculum Vitae</a>
             </button>
             <!-- Ajout des liens GitHub et GitLab -->
             <div class="social-links">
-                <a href="https://github.com/tonusername" class="button-link">GitHub</a>
-                <a href="https://Certificcation Pix/tonusername" class="button-link">Certification Pix</a>
+                <a href="https://github.com/Fatih69190/fatih691.github.io" class="button-link">GitHub</a>
+                <a href="attestation-pix-20250219.pdf" class="button-link">Certification Pix</a>
             </div>
         </div>
     </section>
 </section>
 
 <!-- jeu -->
-
-<section id="clickGame">
-    <div class="game-container">
-        <h2>Jeu de Réflexe</h2>
-        <p id="score">Score : 0</p>
-        <button id="startGame">Démarrer le jeu</button>
-        <div id="gameArea"></div>
-        <p id="finalScore" style="display:none;"></p>
-    </div>
-</section>
-
-<script>
-    const words = ["HTML", "CSS", "JavaScript", "PHP", "Python", "SQL", "Java", "C++"];
-    const gameArea = document.getElementById("gameArea");
-    const scoreDisplay = document.getElementById("score");
-    const finalScore = document.getElementById("finalScore");
-    const startBtn = document.getElementById("startGame");
-
-    let score = 0;
-    let timeLeft = 10;
-    let gameInterval;
-
-    function spawnWord() {
-        const word = document.createElement("div");
-        word.classList.add("word");
-        word.textContent = words[Math.floor(Math.random() * words.length)];
-        word.style.top = Math.random() * 260 + "px";
-        word.style.left = Math.random() * 550 + "px";
-
-        word.onclick = () => {
-            score++;
-            scoreDisplay.textContent = "Score : " + score;
-            word.remove();
-        };
-
-        gameArea.appendChild(word);
-
-        setTimeout(() => {
-            if (gameArea.contains(word)) word.remove();
-        }, 1000);
-    }
-
-    function startGame() {
-        score = 0;
-        timeLeft = 10;
-        scoreDisplay.textContent = "Score : " + score;
-        finalScore.style.display = "none";
-        startBtn.disabled = true;
-        gameInterval = setInterval(spawnWord, 500);
-
-        setTimeout(() => {
-            clearInterval(gameInterval);
-            finalScore.textContent = `⏱️ Temps écoulé ! Votre score final est : ${score}`;
-            finalScore.style.display = "block";
-            startBtn.disabled = false;
-        }, 10000);
-    }
-
-    startBtn.addEventListener("click", startGame);
-</script>
-
 
 
 
