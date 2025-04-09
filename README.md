@@ -4,8 +4,6 @@ Langage utiliser pour la création du portfolio :
 
 -	HTML5
 
--	JavaScript (pour le mini jeux)
-
 -	CSS3
 
 Fonctionnalité :
